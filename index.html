@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Notes Saver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <h2>Quick Notes</h2>
+    <a href="#notes-section">My Notes</a>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h1>Quick Notes Saver</h1>
+      <p class="subtitle">Write your thoughts and save them easily.</p>
+
+      <form id="noteForm">
+        <label for="title">Note Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Enter note title"
+          maxlength="100"
+          required
+        >
+
+        <label for="content">Note Content</label>
+        <textarea
+          id="content"
+          name="content"
+          rows="5"
+          placeholder="Write your note here..."
+          required
+        ></textarea>
+
+        <button type="submit" id="saveBtn">Save Note</button>
+        <p id="statusMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="notes-section" class="notes-section">
+      <h2>My Saved Notes</h2>
+      <p id="listMessage" role="status">Loading notes...</p>
+      <div id="notesList" class="notes-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Quick Notes Saver &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
